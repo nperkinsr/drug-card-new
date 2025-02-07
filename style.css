@@ -1,0 +1,94 @@
+:root {
+    --color1: #292626;   /* Black */
+    --color2: #394c5c;   /* Blue */
+    --color3: #746d6f;   /* Dark Grey */
+    --color4: #bdb1bb;   /* Light Lilac */
+    --color5: #ffffff;   /* White */
+    --color6: #e6e6e6;   /* Light Grey */
+  }
+
+  body {
+    background-color: var(--color6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Helvetica", sans-serif;
+  }
+
+  .singleCardContainer {
+    display: grid;
+    gap: 5px;
+    grid-template-columns:  1fr 1fr;;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 170px;
+    width: 210px;
+    background-color: var(--color5);
+    border-radius: 5px;
+    box-shadow: 4px 4px 0px rgba(60, 60, 60, 0.1);
+  }
+
+  div .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 75%; 
+    padding-bottom: 5px;
+    margin: auto;
+    border-bottom: 2px solid var(--color6);;
+  }
+
+  .icon img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .icon {
+    grid-area: 1 / 1 / 4 / 3;
+  }
+
+  .drugName {
+    grid-area: 5 / 1 / 6 / 3;
+    text-align: center;
+    font-size: 22px;
+    line-height: 5px;
+    font-weight: 800;
+    color: var(--color3);
+  }
+
+  .drugPrice {
+    grid-area: 6 / 1 / 7 / 2;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 25px;
+    color: var(--color3);
+  }
+
+  .drugInPocket {
+    grid-area: 7 / 1 / 8 / 2;
+    font-size: 10px;
+    line-height: 0px;
+    padding-left: 25px;
+    color: var(--color4);
+  }
+
+  .drugAction {
+    grid-area: 6 / 2 / 8 / 3;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 25px;
+    margin-top: -5px;
+  }
+
+  .drugAction img {
+    width: 32px;
+    height: 32px;
+    margin-top: 5px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+
+  .drugAction img:hover {
+    opacity: 1;
+    filter: saturate(30%);
+  }
